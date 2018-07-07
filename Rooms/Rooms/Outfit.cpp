@@ -16,8 +16,9 @@ std::string Outfit::toString()
 {
 	std::string description;
 
-	description = "weapon named ";
-	description += m_name;
-	description += " with ";
-	description += m_defense;
+	description = m_name;
+	description += ":\n\t Defense => ";
+	description += std::to_string(m_defense);
+	description += "\n";
+	return (description);
 }

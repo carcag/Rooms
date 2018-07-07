@@ -10,8 +10,11 @@ class LootCrate
 {
 protected:
 	std::vector<Item*> m_content;
+
+	bool isNextItem(int);
 public:
 	LootCrate();
 	~LootCrate();
+	std::string contentDescription();
 };
 

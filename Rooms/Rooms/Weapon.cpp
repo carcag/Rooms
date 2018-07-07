@@ -17,8 +17,9 @@ std::string Weapon::toString()
 {
 	std::string description;
 
-	description = "weapon named ";
-	description += m_name;
-	description += " with ";
-	description += m_attack;
+	description = m_name;
+	description += ":\n\t Attack => ";
+	description += std::to_string(m_attack);
+	description += "\n";
+	return (description);
 }

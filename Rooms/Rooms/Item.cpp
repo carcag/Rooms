@@ -9,3 +9,8 @@ Item::Item()
 Item::~Item()
 {
 }
+
+std::string Item::toString()
+{
+	return ("");
+}
