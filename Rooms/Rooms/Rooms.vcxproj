@@ -147,6 +147,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="IniReader.h" />
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="LootCrate.h" />
     <ClInclude Include="Outfit.h" />
@@ -155,6 +158,9 @@
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="IniReader.cpp" />
+    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="LootCrate.cpp" />
     <ClCompile Include="Outfit.cpp" />

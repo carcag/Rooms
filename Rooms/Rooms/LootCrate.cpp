@@ -23,6 +23,8 @@ bool LootCrate::isNextItem(int next)
 
 LootCrate::LootCrate()
 {
+	m_iniWeapon = new IniReader("..\\Ressources\\weapons.ini");
+	m_iniOutfit = new IniReader("..\\Ressources\\outfits.ini");
 	std::random_device rand;
 	std::mt19937_64 mersenne(rand());
 	std::uniform_int_distribution<> randomizer(1, 100);
@@ -33,12 +35,12 @@ LootCrate::LootCrate()
 		type = randomizer(mersenne);
 		if (type < 50)
 		{
-			Outfit *a = new Outfit();
+			Outfit *a = new Outfit(m_iniOutfit->getARandomLine());
 			m_content.push_back(a);
 		}
 		else
 		{
-			Weapon *w = new Weapon();
+			Weapon *w = new Weapon(m_iniWeapon->getARandomLine());
 			m_content.push_back(w);
 		}
 	} while (isNextItem(randomizer(mersenne)));
@@ -47,4 +49,6 @@ LootCrate::LootCrate()
 
 LootCrate::~LootCrate()
 {
+	delete(m_iniWeapon);
+	delete(m_iniOutfit);
 }
