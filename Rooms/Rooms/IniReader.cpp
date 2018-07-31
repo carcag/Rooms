@@ -35,4 +35,5 @@ IniReader::IniReader(const std::string fileToread)
 
 IniReader::~IniReader()
 {
+	std::vector<std::string>().swap(m_lines);
 }
